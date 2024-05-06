@@ -4,14 +4,12 @@ Create a Serverless Pipeline for Video Frame Analysis and Alerting
 The instructions mentioned below were required to set up the application. There were a few minor changes introduced pertaining to the demo requirements, which need to be kept in mind if adopting this application code for a different purpose. 
 1. Replace {ACCOUNT_ID} in lambda/imageprocessor/imageprocessor.py and /aws-infra/aws-infra-cfn.yaml with the account that has the cross-account-policy to send SMS for SNS notifications.
 2. This might not be required if we're using the same account and providing the user the permission to send SNS notifications or using other alternatives. So either the affected code should to be cleaned up or appropriate ACCOUNT ID should be provided.
-3. OpenCV can be installed directly using `pip install opencv-python`
+3. OpenCV can be installed directly using `pip install opencv-python`.
 
-========
 
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
-========
 
 
 ## Introduction
