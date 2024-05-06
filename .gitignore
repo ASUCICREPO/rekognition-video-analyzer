@@ -20,7 +20,6 @@ pyenv*
 build/*
 !build/.gitkeep
 build.pyc
-config/
 #web-ui/logs/*
 #web-ui/node_modules/
 #web-ui/bower_components/
