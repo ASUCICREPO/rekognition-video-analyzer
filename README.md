@@ -1,6 +1,31 @@
 Create a Serverless Pipeline for Video Frame Analysis and Alerting
 ========
 
+## Disclaimers
+Customers are responsible for making their own independent assessment of the information in this document.
+
+This document:
+
+(a) is for informational purposes only,
+
+(b) references AWS product offerings and practices, which are subject to change without notice,
+
+(c) does not create any commitments or assurances from AWS and its affiliates, suppliers or licensors. AWS products or services are provided "as is" without warranties, representations, or conditions of any kind, whether express or implied. The responsibilities and liabilities of AWS to its customers are controlled by AWS agreements, and this document is not part of, nor does it modify, any agreement between AWS and its customers, and
+
+(d) is not to be considered a recommendation or viewpoint of AWS.
+
+Additionally, you are solely responsible for testing, security and optimizing all code and assets on GitHub repo, and all such code and assets should be considered:
+
+(a) as-is and without warranties or representations of any kind,
+
+(b) not suitable for production environments, or on production or other critical data, and
+
+(c) to include shortcuts in order to support rapid prototyping such as, but not limited to, relaxed authentication and authorization and a lack of strict adherence to security best practices.
+
+All work produced is open source. More information can be found in the GitHub repo.
+
+---------------------------------------------------------------------------------------
+
 The instructions mentioned below were required to set up the application. There were a few minor changes introduced pertaining to the demo requirements, which need to be kept in mind if adopting this application code for a different purpose. 
 1. Replace {ACCOUNT_ID} in lambda/imageprocessor/imageprocessor.py and /aws-infra/aws-infra-cfn.yaml with the account that has the cross-account-policy to send SMS for SNS notifications.
 2. This might not be required if we're using the same account and providing the user the permission to send SNS notifications or using other alternatives. So either the affected code should to be cleaned up or appropriate ACCOUNT ID should be provided.
@@ -461,27 +486,5 @@ All defaults can be overridden in the cfn-params.json configuration file. Thatâ€
 
 > **Q: Why is this project titled "amazon-rekognition-video-analyzer" despite the security-focused use case?** 
 
+
 > **A:** Although this prototype was conceived to address the security monitoring and alerting use case, you can use the prototype's architecture and code as a starting point to address a wide variety of use cases involving low-latency analysis of live video frames with Amazon Rekognition.
-
-## Disclaimers
-Customers are responsible for making their own independent assessment of the information in this document.
-
-This document:
-
-(a) is for informational purposes only,
-
-(b) references AWS product offerings and practices, which are subject to change without notice,
-
-(c) does not create any commitments or assurances from AWS and its affiliates, suppliers or licensors. AWS products or services are provided "as is" without warranties, representations, or conditions of any kind, whether express or implied. The responsibilities and liabilities of AWS to its customers are controlled by AWS agreements, and this document is not part of, nor does it modify, any agreement between AWS and its customers, and
-
-(d) is not to be considered a recommendation or viewpoint of AWS.
-
-Additionally, you are solely responsible for testing, security and optimizing all code and assets on GitHub repo, and all such code and assets should be considered:
-
-(a) as-is and without warranties or representations of any kind,
-
-(b) not suitable for production environments, or on production or other critical data, and
-
-(c) to include shortcuts in order to support rapid prototyping such as, but not limited to, relaxed authentication and authorization and a lack of strict adherence to security best practices.
-
-All work produced is open source. More information can be found in the GitHub repo.
